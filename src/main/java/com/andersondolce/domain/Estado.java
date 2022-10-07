@@ -2,7 +2,9 @@ package com.andersondolce.domain;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,6 +27,7 @@ public class Estado implements Serializable{
 	@JsonBackReference
 	@OneToMany(mappedBy = "estado")
 	private List<Cidade> cidades = new ArrayList<>();
+	
 	
 	public Estado() {
 		
